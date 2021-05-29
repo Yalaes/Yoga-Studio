@@ -1,2 +1,2 @@
 # Yoga-Studio
-Website Yoga Studio
+Website Yoga Studio Template/Prototype

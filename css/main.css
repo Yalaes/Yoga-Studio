@@ -1,0 +1,67 @@
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 63.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #FBF7F7;
+  color: #5A5449;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.u_center-page {
+  max-width: 1440px;
+}
+
+.hero-bg {
+  background-color: #FBF7F7;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(65, 176, 193, 0.2)), color-stop(85%, #fbf7f7));
+  background-image: linear-gradient(0deg, rgba(65, 176, 193, 0.2) 0%, #fbf7f7 85%);
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero__image-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  padding-top: 10vh;
+  width: 50%;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.hero__image-container img {
+  display: block;
+  max-height: 100%;
+  width: auto;
+  margin-left: auto;
+  margin-right: 20vw;
+}
+/*# sourceMappingURL=main.css.map */

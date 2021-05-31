@@ -9,14 +9,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,800;0,900;1,300&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Yoga Studio</title>
 </head>
 
 <body>
+    <!-- navigation and hero -->
     <header class="header">
-
-
         <nav class="nav">
             <a href="#">
                 <div class="nav-logo">
@@ -25,21 +25,27 @@
                 </div>
             </a>
 
-            <div class="u-flex-cc">
-                <div class="burger">
+            <a href="#w" class="cta cta--nav">See our courses</a>
+
+            <div class="menu-global">
+                <input type="checkbox" class="nav-checkbox" id="navi__toogle">
+                <label for="navi__toogle">
+                    <div class="wrap-burger">
+                        <div class="burger"></div>
+                    </div>
+                </label>
+
+                <div class="menu" id="menu">
+                    <ul class="menu-list">
+                        <li class="menu-items"><a href="#about" class="menu-link">About Us</a></li>
+                        <li class="menu-items"><a href="#" class="menu-link">Classes</a></li>
+                        <li class="menu-items"><a href="#" class="menu-link">Location</a></li>
+                        <li class="menu-items"><a href="#" class="menu-link">Contact</a></li>
+                    </ul>
                 </div>
             </div>
+
         </nav>
-
-        <div class="menu" id="menu">
-            <ul class="menu-list">
-                <li class="menu-items"><a href="#" class="menu-link">About Us</a></li>
-                <li class="menu-items"><a href="#" class="menu-link">Classes</a></li>
-                <li class="menu-items"><a href="#" class="menu-link">Location</a></li>
-                <li class="menu-items"><a href="#" class="menu-link">Contact</a></li>
-            </ul>
-        </div>
-
 
         <div class="hero-bg ">
             <div class="hero u_center-page">
@@ -47,7 +53,7 @@
                     <h1 class="hero__text-title">Lift your spirit<br>Build your body<br>Relax your mind</h1>
                     <h2 class="hero__text-subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore,
                         totam.</h2>
-                    <a href="#" class="cta">About Us</a>
+                    <a href="#about" class="cta">About Us</a>
 
                 </div>
 
@@ -55,11 +61,45 @@
                     <img src="images/hero-546.png" alt="women meditating hands up, header image">
                 </div>
             </div>
-
+            <div id="about"></div>
         </div>
-
     </header>
 
+    <section class="about-section u_center-page u_center-page-min">
+
+        <div class="about section-mtb">
+            <div class="about__images">
+
+                <div class="card-wrap">
+                    <div class="card-container">
+                        <div class="card-front"><img src="images/about-1.jpg" alt=""></div>
+                        <div class="card-back"><img src="images/about-2.jpg" alt=""></div>
+                    </div>
+                </div>
+
+               
+              
+
+            </div>
+
+            <div class="about__text">
+                <h3 class="heading-3 mb-3">About us</h3>
+                <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet illo delectus culpa
+                    fugit tempora
+                    unde libero fuga, ea in ex, ratione quibusdam laboriosam incidunt earum voluptas quo amet quas quae
+                    mollitia, laudantium neque magni eum! Est, placeat esse. Id asperiores nulla corrupti quae impedit,
+                    voluptatum quisquam officiis quo? Nemo alias praesentium earum magni nesciunt similique voluptas
+                    deserunt atque enim quas perferendis, delectus repudiandae maiores distinctio sed architecto animi
+                    pariatur, optio adipisci ea! Sed obcaecati atque nobis tempore voluptate temporibus non quibusdam id
+                    eligendi tenetur officiis magni sit sequi fugit harum quos quisquam, nam deleniti est vel illo nulla
+                    accusamus? Ipsum nulla quo dolorem fugit nisi perferendis corrupti! Illo nam accusantium laudantium
+                    repellendus expedita, quaerat excepturi libero temporibus incidunt rem neque quos totam, dignissimos
+                </p>
+                <a href="#" class="cta mb-3">Join Us</a>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

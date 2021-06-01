@@ -1,3 +1,11 @@
+//burger icon toogle style
+const wrapBurger = document.querySelector(".wrap-burger");
+const burger = document.querySelector(".burger");
+
+wrapBurger.addEventListener("click", () => {
+    burger.classList.toggle("cross");
+})
+
 // Menu pop in
 const checkbox = document.querySelector("#navi__toogle");
 const menuLinks = document.querySelectorAll(".menu-link");
@@ -5,8 +13,11 @@ const menuLinks = document.querySelectorAll(".menu-link");
 menuLinks.forEach(link => {
     link.addEventListener("click", () => {
         checkbox.checked = false;
+        burger.classList.toggle("cross");
     })
 })
+
+
 
 // Navigation change style on scroll - TODO better than this
 const nav = document.querySelector(".nav");

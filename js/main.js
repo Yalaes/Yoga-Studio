@@ -25,3 +25,19 @@ const nav = document.querySelector(".nav");
 window.addEventListener("scroll", () => {
     (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)?  nav.classList.add("nav-scrolled") : nav.classList.remove("nav-scrolled");
 })
+
+
+//gallery photo animation
+const galleryImages = document.querySelectorAll(".gallery-img");
+
+galleryImages.forEach(image => {
+  
+  image.addEventListener("click", () => {
+    removeActiveClass();
+    image.classList.add("active");
+  })
+})
+
+function removeActiveClass() {
+  galleryImages.forEach(image => image.classList.remove("active"))
+}

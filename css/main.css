@@ -258,7 +258,7 @@ ul {
   background-size: cover;
   background-position: center;
   padding: 4rem;
-  margin-bottom: 14rem;
+  margin-bottom: 12rem;
   color: #FBF7F7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -374,7 +374,7 @@ ul {
 .menu-items {
   text-transform: uppercase;
   font-weight: 600;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 .menu:target {
@@ -431,8 +431,15 @@ ul {
   font-size: clamp(2rem, 10vw, 6rem);
 }
 
+@media only screen and (max-width: 75em) {
+  .hero__text-title {
+    font-size: clamp(2rem, 6vw, 5rem);
+  }
+}
+
 .hero__text-subtitle {
   font-style: italic;
+  text-transform: lowercase;
   font-weight: lighter;
   margin-bottom: 3rem;
   max-width: 30ch;
@@ -464,6 +471,12 @@ ul {
   display: block;
   max-height: 95%;
   width: auto;
+}
+
+@media only screen and (max-width: 75em) {
+  #cta-nav {
+    display: none;
+  }
 }
 
 .about {
@@ -582,13 +595,26 @@ ul {
 
 .card__text {
   position: absolute;
-  padding: 0 1.5rem;
-  padding-top: 3rem;
-  color: #FBF7F7;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), color-stop(80%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 80%, rgba(0, 0, 0, 0));
-  bottom: 0;
+  top: 0;
   left: 0;
+  height: 100%;
+  padding: 2rem;
+  color: #FBF7F7;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6)));
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 10;
 }
 
@@ -605,7 +631,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   gap: 4rem;
-  padding-top: 5rem;
+  padding-top: 10rem;
   padding-bottom: 5rem;
 }
 
@@ -676,50 +702,58 @@ ul {
 }
 
 .gallery {
-  height: 100vh;
-}
-
-.gallery__content {
-  max-width: 100%;
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[11];
-      grid-template-columns: repeat(11, 1fr);
-  -ms-grid-rows: (1fr)[7];
-      grid-template-rows: repeat(7, 1fr);
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
-  row-gap: 2rem;
-}
-
-.gallery__content-img {
-  display: block;
   width: 100%;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.gallery-img {
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 80%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 2px solid #41B0C1;
-  border-radius: 3rem;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  cursor: pointer;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  opacity: .8;
 }
 
-.gallery__content-img--1 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1 / 5;
-  grid-row: 1 / -1;
+.gallery-img:hover {
+  opacity: 1;
 }
 
-.gallery__content-img--2 {
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 3;
-  grid-column: 5 / 8;
-  grid-row: 1 / -1;
-}
-
-.gallery__content-img--3 {
-  grid-column: 8 / -1;
-  grid-row: 1 / -1;
+.gallery-img.active {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  opacity: 1;
 }
 
 .footer {

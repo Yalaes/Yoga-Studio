@@ -17,15 +17,12 @@ menuLinks.forEach(link => {
     })
 })
 
-
-
 // Navigation change style on scroll - TODO better than this
 const nav = document.querySelector(".nav");
 
 window.addEventListener("scroll", () => {
     (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)?  nav.classList.add("nav-scrolled") : nav.classList.remove("nav-scrolled");
 })
-
 
 //gallery photo animation
 const galleryImages = document.querySelectorAll(".gallery-img");
